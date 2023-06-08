@@ -1,7 +1,6 @@
 package entity;
 
 public class Product {
-    private static int idDefault=1;
     private int id;
     private String name;
     private long price;
@@ -21,15 +20,6 @@ public class Product {
         this.like = like;
     }
 
-    public Product(String name, long price, String date, String nsx, int like) {
-        this.id=idDefault;
-        this.name = name;
-        this.price = price;
-        this.date = date;
-        this.nsx = nsx;
-        this.like = like;
-        this.id++;
-    }
 
     public int getId() {
         return id;

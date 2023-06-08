@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 public class SearchNameImpl implements Search {
 
+    @Override
     public List<Product> searchListProduct(String type) {
         List<Product> result=new ArrayList<>();
         ProductService productServiceImpl=new ProductServiceImpl();
@@ -28,7 +29,4 @@ public class SearchNameImpl implements Search {
         return result;
     }
 
-    public List<Product> searchListProduct(long price) {
-        return null;
-    }
 }

@@ -11,20 +11,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SearchPriceImpl implements Search {
+    @Override
     public List<Product> searchListProduct(String type) {
-        return null;
-    }
-
-    public List<Product> searchListProduct(long price) {
         List<Product> result=new ArrayList<>();
         ProductService productServiceImpl=new ProductServiceImpl();
         List<Product> listProduct= productServiceImpl.getProductAll();
 
         for (Product list:listProduct){
-            if (list.getPrice()>=price){
+            if (list.getPrice()>=Long.valueOf(type)){
                 result.add(list);
             }
         }
         return result;
     }
+
 }

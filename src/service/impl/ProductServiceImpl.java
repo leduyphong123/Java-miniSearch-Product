@@ -12,10 +12,9 @@ import java.util.List;
 
 public class ProductServiceImpl implements ProductService {
 
-    private List<Product> listProduct;
+
 
     public ProductServiceImpl() {
-        listProduct = new ArrayList<>();
     }
 
     @Override
@@ -49,6 +48,7 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProductAll() {
         FileReader fr;
         BufferedReader br;
+        List<Product> listProduct = new ArrayList<>();
         try {
             fr = new FileReader("data//product.csv");
             br = new BufferedReader(fr);

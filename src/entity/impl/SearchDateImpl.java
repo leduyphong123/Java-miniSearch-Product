@@ -8,11 +8,9 @@ import java.util.List;
 public class SearchDateImpl implements Search {
 
 
+    @Override
     public List<Product> searchListProduct(String type) {
         return null;
     }
 
-    public List<Product> searchListProduct(long price) {
-        return null;
-    }
 }
